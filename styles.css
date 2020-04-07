@@ -1,0 +1,70 @@
+body {
+    background-color: #e8e8e8;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    color: #454545;
+}
+
+main {
+    flex: 1 0 auto;
+  }
+
+.header {
+    background: rgb(130,216,202);
+    background: linear-gradient(180deg, rgba(130,216,202,1) 45%, rgba(72,188,196,1) 100%);
+    border-bottom: 2px solid white;
+    height: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+#logo {
+    height: 100px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+#container {
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#item-div {
+    background-color: white;
+    margin: 10px;
+    border: 2px solid #a8a8a8;
+    padding: 10px 30px;
+}
+
+.city-div {
+    margin-left: 10px;
+}
+
+.weather-div {
+    height: 200px;
+}
+
+.recipe-div {
+    height: 500px;
+}
+
+footer {
+    background: rgb(130,216,202);
+    background: linear-gradient(180deg, rgba(130,216,202,1) 45%, rgba(72,188,196,1) 100%);
+    border-top: 2px solid white;
+    height: 50px;
+    text-align: center;
+    color: white;
+}
