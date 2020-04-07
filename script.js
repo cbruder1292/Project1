@@ -20,7 +20,7 @@ $(document).ready(function () {
             var tempC = response.main.temp;
             var tempF = (((tempC- 273.15) * 1.80) + 32).toFixed(2);
             console.log(tempF);
-            $("#temp").appendtext("Temperature: " + tempF);
+            $("#temp").text("Temperature: " + tempF);
         
 
         });
