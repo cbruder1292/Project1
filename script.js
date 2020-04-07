@@ -15,12 +15,13 @@ $(document).ready(function () {
             var today = new Date();
             var date = today.getMonth()+'/'+(today.getDate()+1)+'/'+today.getFullYear();
             console.log(date);
-            // $(".weather-div").text(cityName + "(" + date +")");
+            $("#cityName").text(cityName + "(" + date +")");
 
             var tempC = response.main.temp;
             var tempF = (((tempC- 273.15) * 1.80) + 32).toFixed(2);
             console.log(tempF);
-            // $(".weather-div").appendtext("Temperature: " + tempF);
+            $("#temp").appendtext("Temperature: " + tempF);
+        
 
         });
     }
