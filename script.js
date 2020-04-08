@@ -75,6 +75,8 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET"
         }).then(function (response) {
+            console.log(response);
+            
            var foodName = response.meals[0].strMeal;
            $("#foodName").text(foodName);
 
