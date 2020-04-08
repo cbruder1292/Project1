@@ -16,6 +16,8 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script
       src="http://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -59,28 +61,34 @@
                   <img class="activator" id="foodPic" src="">
                 </div>
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4" id="foodName">
+                  <span class="card-title activator grey-text text-darken-4"><span id="foodName"></span><i class="material-icons right">more_vert</i></span> 
+                    
+                  
                     <!-- <i class="material-icons right">Description</i></span> -->
-                  <p><a href="#" id="recipeLink">Recipe Link</a></p>
-                  <p><a href="#" id="youtubeLink">YouTube</a></p>
+                  <!-- <p><a href="#" id="recipeLink">Recipe Link</a></p>
+                  <p><a href="#" id="youtubeLink">YouTube</a></p> -->
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4" id="foodName">About<i class="material-icons right">close</i></span>
-                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                  <span class="card-title grey-text text-darken-4" id="foodName">About
+                      <i class="material-icons right">more_vert</i>
+                  </span>
+                  <p id="foodDescription"></p>
+                  <button class="cardButton" id="recipeLink">Recipe</button>
+                  <button class="cardButton" id="youtubeLink">YouTube Video</button>
                 </div>
               </div>
 
 
-
+<!-- 
               <img src="" id="foodPic">
 
               <h3 id="foodName"></h3>
 
-              <p id="foodDescription"></p>
+              <p id="foodDescription"></p> -->
 
-              <a id="recipeLink">Click here for the Recipe</a>
+              <!-- <a id="recipeLink">Click here for the Recipe</a> -->
                 
-              <a id="youtubeLink">Click here for the YouTube Video</a>
+              <!-- <a id="youtubeLink">Click here for the YouTube Video</a> -->
 
               </div>
         </div>
