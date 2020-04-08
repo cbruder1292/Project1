@@ -81,11 +81,15 @@ $(document).ready(function () {
            $("#foodName").text(foodName);
 
            var foodImage = response.meals[0].strMealThumb;
+           console.log(foodImage);
+           var foodRecipe = response.meals[0].strSource;
+           console.log(foodRecipe);
            $("#foodPic").attr("src",foodImage);
 
            var foodVideo = response.meals[0].strYoutube;
            $("#youtubeLink").attr("href",foodVideo);
            console.log(foodVideo);
+        
         });
 
      }
