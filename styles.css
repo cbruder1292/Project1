@@ -81,6 +81,17 @@ button {
     margin-bottom: 15px;
 }
 
+.material-icons {
+    margin: 3px;
+}
+
+.cardButton {
+    background: rgb(130,216,202);
+    background: linear-gradient(180deg, rgba(130,216,202,1) 45%, rgba(72,188,196,1) 100%);
+    color: white;
+    padding: 5px;
+}
+
 footer {
     background: rgb(130,216,202);
     background: linear-gradient(180deg, rgba(130,216,202,1) 45%, rgba(72,188,196,1) 100%);
