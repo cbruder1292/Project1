@@ -14,7 +14,7 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
             var today = new Date();
-            var date = today.getMonth()+'/'+(today.getDate()+1)+'/'+today.getFullYear();
+            var date = today.getMonth()+'/'+(today.getDate())+'/'+today.getFullYear();
             console.log(date);
             $("#cityName").text(cityName + "(" + date +")");
 
@@ -32,35 +32,40 @@ $(document).ready(function () {
             var array =["52846", "52814", "52867", "52812", "52806"];
             var indexValue = Math.floor(Math.random() *(5));  
             var recipeChoice = array[indexValue];     
-             console.log("index value: " +recipeChoice);    
+            //  console.log("index value: " +recipeChoice); 
+             recipeapifunction(recipeChoice);   
          }
 
          else  if(tempF >= 20 && tempF < 40){
             var array =["52813", "52844", "52993", "52805", "52810"];
             var indexValue = Math.floor(Math.random() *(5));
             var recipeChoice = array[indexValue];   
-            console.log("index value: " +recipeChoice);   
+            // console.log("index value: " +recipeChoice);   
+            recipeapifunction(recipeChoice);   
          }
 
          else  if(tempF >= 40 && tempF < 60){
             var array =["52959", "52773", "52803", "52796", "52807"];
             var indexValue = Math.floor(Math.random() *(5));
             var recipeChoice = array[indexValue];     
-             console.log("index value: " +recipeChoice);     
+            //  console.log("index value: " +recipeChoice); 
+             recipeapifunction(recipeChoice);       
          }
 
          else  if(tempF >= 60 && tempF < 80){
             var array =["52994", "53010", "52997", "52832", "52816"];
             var indexValue = Math.floor(Math.random() *(5));
             var recipeChoice = array[indexValue];    
-             console.log("index value: " +recipeChoice);     
+            //  console.log("index value: " +recipeChoice);
+             recipeapifunction(recipeChoice);        
          }
 
          else if(tempF >= 80){
             var array =["52819", "52777", "52960", "52937", "52852"];
             var indexValue = Math.floor(Math.random() *(5));
             var recipeChoice = array[indexValue];    
-            console.log("index value: " +recipeChoice);     
+            // console.log("index value: " +recipeChoice);  
+            recipeapifunction(recipeChoice);      
          }
      }
 
@@ -70,11 +75,15 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET"
         }).then(function (response) {
-
+           console.log(response);
+           var foodName = response.meals[0].strMeal;
+           console.log(foodName); 
+           var foodImage = response.meals[0].strMealThumb;
+           console.log(foodImage);
+           var foodVideo = response.meals[0].strYoutube;
+           console.log(foodVideo);
         });
 
      }
-
-
     });
     
