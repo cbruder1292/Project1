@@ -80,8 +80,11 @@ $(document).ready(function () {
            console.log(foodName); 
            var foodImage = response.meals[0].strMealThumb;
            console.log(foodImage);
+           var foodRecipe = response.meals[0].strSource;
+           console.log(foodRecipe)
            var foodVideo = response.meals[0].strYoutube;
            console.log(foodVideo);
+        
         });
 
      }
