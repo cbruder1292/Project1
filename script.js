@@ -75,14 +75,19 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET"
         }).then(function (response) {
-           console.log(response);
+            console.log(response);
+            
            var foodName = response.meals[0].strMeal;
-           console.log(foodName); 
+           $("#foodName").text(foodName);
+
            var foodImage = response.meals[0].strMealThumb;
            console.log(foodImage);
            var foodRecipe = response.meals[0].strSource;
-           console.log(foodRecipe)
+           console.log(foodRecipe);
+           $("#foodPic").attr("src",foodImage);
+
            var foodVideo = response.meals[0].strYoutube;
+           $("#youtubeLink").attr("href",foodVideo);
            console.log(foodVideo);
         
         });
