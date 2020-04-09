@@ -38,42 +38,32 @@ $(document).ready(function () {
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
             var description = menuDescription[indexValue];
-            console.log(description);
-            console.log("index value: " + recipeChoice); 
-            recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 20 && tempF < 40) {
             var array = ["52813", "52844", "52993", "52805", "52810"];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            // console.log("index value: " +recipeChoice);   
-            //recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 40 && tempF < 60) {
             var array = ["52959", "52773", "52803", "52796", "52807"];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            //  console.log("index value: " +recipeChoice); 
-            recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 60 && tempF < 80) {
             var array = ["52994", "53010", "52997", "52832", "52816"];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            //  console.log("index value: " +recipeChoice);
-            //recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 80) {
             var array = ["52819", "52777", "52960", "52937", "52852"];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            // console.log("index value: " +recipeChoice);  
-            //recipeapifunction(recipeChoice);
         }
+        recipeapifunction(recipeChoice);
         foodescription(description);
     }
 
@@ -93,18 +83,26 @@ $(document).ready(function () {
             console.log(foodImage);
 
             var foodRecipe = response.meals[0].strSource;
-            console.log(foodRecipe);
+            var aTagRecipe = $("<a>");
+            aTagRecipe.attr("href", foodRecipe);
+            aTagRecipe.attr("target", "_blank");
+            aTagRecipe.text("Recipe");
+            $("#recipelink").append(aTagRecipe);
            
-
             var foodVideo = response.meals[0].strYoutube;
-            $("#youtubeLink").attr("href", foodVideo);
-            console.log(foodVideo);
+            var aTag = $("<a>");
+            aTag.attr("href", foodVideo);
+            aTag.attr("target", "_blank");
+            aTag.text("YouTube Video");
+            $("#youtubelink").append(aTag);
         });
 
     }
     function foodescription(description) {
         console.log(description);
-        
         $("#foodDescription").text(description);
     }
+
+    
+
 });
