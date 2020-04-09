@@ -138,10 +138,20 @@ $(document).ready(function () {
             $("#recipeid").attr("href", foodRecipe);
             $("#recipeid").attr("target", "_blank");
         
+            if(foodRecipe === "") {
+                $("#recipelink").hide();
+                console.log("not here");
+            }
+
             var foodVideo = response.meals[0].strYoutube;
 
-            $("youtubeid").attr("href", foodVideo);
-            $("youtubeid").attr("target", "_blank");
+            if(foodVideo === "") {
+                $("#youtubelink").hide();
+                console.log("not here");
+            }
+
+            $("#youtubeid").attr("href", foodVideo);
+            $("#youtubeid").attr("target", "_blank");
         });
 
     }
