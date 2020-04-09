@@ -136,7 +136,7 @@ $(document).ready(function () {
             var aTag = $("<a>");
             aTag.attr("href", foodVideo);
             aTag.attr("target", "_blank");
-            aTag.text("YouTube Video");
+            aTag.text().text("YouTube Video");
             $("#youtubelink").append(aTag);
         });
 
