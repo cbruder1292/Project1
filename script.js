@@ -28,7 +28,7 @@ $(document).ready(function () {
             console.log(response);
             var today = new Date();
             var date = today.getMonth() + '/' + (today.getDate()) + '/' + today.getFullYear();
-            console.log(date);s
+            console.log(date);
             $("#cityName").text(cityName);
             $("#cityDate").text(date);
 
