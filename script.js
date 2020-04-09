@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
 
     function showRow2 () {
         $("#row2").show();
@@ -17,6 +18,15 @@ $(document).ready(function () {
         apicallFunction(cityName);
         showRow2();
     })
+    
+    $("#cityInput").keypress(function(event){
+        var keyCode = (event.keyCode ? event.keyCode : event.which);
+        if(keyCode == '13'){
+            var cityName = $("#cityInput").val();
+        apicallFunction(cityName);
+        showRow2();
+        }
+    })
 
     function apicallFunction(cityName) {
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=c4054486704fd93a795570310c9ddbb7";
@@ -28,7 +38,6 @@ $(document).ready(function () {
             var today = new Date();
             var date = today.getMonth() + '/' + (today.getDate()) + '/' + today.getFullYear();
             console.log(date);
-            // $("#cityName").text(cityName + "(" + date + ")");
             $("#cityName").text(cityName);
             $("#cityDate").text(date);
 
@@ -126,18 +135,13 @@ $(document).ready(function () {
             console.log(foodImage);
 
             var foodRecipe = response.meals[0].strSource;
-            var aTagRecipe = $("<a>");
-            aTagRecipe.attr("href", foodRecipe);
-            aTagRecipe.attr("target", "_blank");
-            aTagRecipe.text("Recipe");
-            $("#recipelink").append(aTagRecipe);
+            $("#recipeid").attr("href", foodRecipe);
+            $("#recipeid").attr("target", "_blank");
         
             var foodVideo = response.meals[0].strYoutube;
-            var aTag = $("<a>");
-            aTag.attr("href", foodVideo);
-            aTag.attr("target", "_blank");
-            aTag.text().text("YouTube Video");
-            $("#youtubelink").append(aTag);
+
+            $("youtubeid").attr("href", foodVideo);
+            $("youtubeid").attr("target", "_blank");
         });
 
     }
