@@ -18,6 +18,15 @@ $(document).ready(function () {
         apicallFunction(cityName);
         showRow2();
     })
+    
+    $("#cityInput").keypress(function(event){
+        var keyCode = (event.keyCode ? event.keyCode : event.which);
+        if(keyCode == '13'){
+            var cityName = $("#cityInput").val();
+        apicallFunction(cityName);
+        showRow2();
+        }
+    })
 
     function apicallFunction(cityName) {
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=c4054486704fd93a795570310c9ddbb7";
