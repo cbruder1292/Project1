@@ -139,6 +139,7 @@ $(document).ready(function () {
             $("#recipeid").attr("target", "_blank");
         
             var foodVideo = response.meals[0].strYoutube;
+
             $("youtubeid").attr("href", foodVideo);
             $("youtubeid").attr("target", "_blank");
         });
