@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
 
     function showRow2 () {
         $("#row2").show();
@@ -27,8 +28,7 @@ $(document).ready(function () {
             console.log(response);
             var today = new Date();
             var date = today.getMonth() + '/' + (today.getDate()) + '/' + today.getFullYear();
-            console.log(date);
-            // $("#cityName").text(cityName + "(" + date + ")");
+            console.log(date);s
             $("#cityName").text(cityName);
             $("#cityDate").text(date);
 
@@ -126,18 +126,12 @@ $(document).ready(function () {
             console.log(foodImage);
 
             var foodRecipe = response.meals[0].strSource;
-            var aTagRecipe = $("<a>");
-            aTagRecipe.attr("href", foodRecipe);
-            aTagRecipe.attr("target", "_blank");
-            aTagRecipe.text("Recipe");
-            $("#recipelink").append(aTagRecipe);
+            $("#recipeid").attr("href", foodRecipe);
+            $("#recipeid").attr("target", "_blank");
         
             var foodVideo = response.meals[0].strYoutube;
-            var aTag = $("<a>");
-            aTag.attr("href", foodVideo);
-            aTag.attr("target", "_blank");
-            aTag.text("YouTube Video");
-            $("#youtubelink").append(aTag);
+            $("youtubeid").attr("href", foodVideo);
+            $("youtubeid").attr("target", "_blank");
         });
 
     }
