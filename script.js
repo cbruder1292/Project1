@@ -38,9 +38,6 @@ $(document).ready(function () {
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
             var description = menuDescription[indexValue];
-            console.log(description);
-            console.log("index value: " + recipeChoice);
-            recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 20 && tempF < 40) {
@@ -52,9 +49,6 @@ $(document).ready(function () {
                 "Ossobuco Milanese is an Italian specialty made by braising veal shanks with vegetables and white wine. Depending on the region of Italy, it is most often served with a risotto or polenta and will be sure to leave the whole family wanting more."];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            var description = menuDescription[indexValue];
-            // console.log("index value: " +recipeChoice);   
-            recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 40 && tempF < 60) {
@@ -66,9 +60,6 @@ $(document).ready(function () {
                 "Hailing from the Punjab region of India, Baingan bharta is a vegetarian dish prepared by mincing eggplant that is grilled over charcoal or directly over a flame. The smoked eggplant is then mixed with tomato, onion, ginger, garlic and cilantro."];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            var description = menuDescription[indexValue];
-            console.log("index value: " + recipeChoice);
-            recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 60 && tempF < 80) {
@@ -80,9 +71,6 @@ $(document).ready(function () {
                 "This dish is perfect as the weather starts to warm up and flowers begin to bloom as spring turns into summer. Fresh and bright, the roasted eggplant with some seasoned lentils and pine nuts will be sure to impress your guests."];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            var description = menuDescription[indexValue];
-            console.log("index value: " + recipeChoice);
-            recipeapifunction(recipeChoice);
         }
 
         else if (tempF >= 80) {
@@ -94,11 +82,10 @@ $(document).ready(function () {
                 "A tuna Nicoise salad is a quintessential summer dish. Incorporating hard-boiled eggs, spinach, onion and potatoes, it is the perfect blend of light and filling for a lunch on the go or a family dinner."];
             var indexValue = Math.floor(Math.random() * (5));
             var recipeChoice = array[indexValue];
-            var description = menuDescription[indexValue];
-            console.log("index value: " + recipeChoice);
-            recipeapifunction(recipeChoice);
         }
+        recipeapifunction(recipeChoice);
         foodescription(description);
+        
     }
 
     function recipeapifunction(recipeChoice) {
@@ -117,18 +104,26 @@ $(document).ready(function () {
             console.log(foodImage);
 
             var foodRecipe = response.meals[0].strSource;
-            console.log(foodRecipe);
-
-
+            var aTagRecipe = $("<a>");
+            aTagRecipe.attr("href", foodRecipe);
+            aTagRecipe.attr("target", "_blank");
+            aTagRecipe.text("Recipe");
+            $("#recipelink").append(aTagRecipe);
+        
             var foodVideo = response.meals[0].strYoutube;
-            $("#youtubeLink").attr("href", foodVideo);
-            console.log(foodVideo);
+            var aTag = $("<a>");
+            aTag.attr("href", foodVideo);
+            aTag.attr("target", "_blank");
+            aTag.text("YouTube Video");
+            $("#youtubelink").append(aTag);
         });
 
     }
     function foodescription(description) {
         console.log(description);
-
         $("#foodDescription").text(description);
     }
+
+    
+
 });
