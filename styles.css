@@ -104,3 +104,47 @@ footer {
     text-align: center;
     color: white;
 }
+
+#defaultbackground{
+    /* background-image: url("");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #FAFAFA;
+}
+
+#belowtwenty{
+    width: 100%;
+    background-image: url("https://thumbs.dreamstime.com/b/winter-tree-lined-road-snow-12252339.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#twentytofourty{
+    background-image: url("https://live.staticflickr.com/2173/2133594416_d60a90ee5b_b.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#fourtytosixty{
+    background-image: url("https://thewallpapers.org/zoom/26704/2-spring-season-blooming-of-green-leaves--pictures.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sixtytoeighty{
+    background-image: url("https://cdn.suwalls.com/wallpapers/nature/beautiful-summer-day-39604-1920x1200.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#aboveeighty{
+    background-image: url("https://thenypost.files.wordpress.com/2018/09/180910-making-rain-sahara-desert-feature.jpg?quality=80&strip=all");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

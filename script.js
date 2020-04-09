@@ -10,6 +10,8 @@ $(document).ready(function () {
     }
     hideRow2();
 
+    $("body").attr("id","defaultbackground");
+
     $("#button-addon2").on("click", function () {
         var cityName = $("#cityInput").val();
         apicallFunction(cityName);
@@ -46,9 +48,9 @@ $(document).ready(function () {
                 "Is there anything better on a winter day than a sitting by a fireplace and a beef pot roast cooking on the stove? The meat will be fall-off-the-bone tender and is sure to fill up the whole family with some leftovers to spare",
                 "Chicken Tandoori is one of the most famous dishes from India. Marinading in a creamy yogurt and lime sauce is the perfect way to balance out the spicy chicken. Serve with some fresh nann and seasoned rice"];
             var indexValue = Math.floor(Math.random() * (array.length));
-            console.log(indexValue); 
             var recipeChoice = array[indexValue];
             var description = menuDescription[indexValue];
+            $("body").attr("id","belowtwenty");
         }
 
         else if (tempF >= 20 && tempF < 40) {
@@ -59,9 +61,9 @@ $(document).ready(function () {
                 "Biryani is a staple of Indian cuisine and for good reason! This dish is highly versatile and can be made with beef, chicken, vegetables, or like this preparation, with lamb. Be sure to generously season the meat and rice with nutmeg, coriander and cumin.",
                 "Ossobuco Milanese is an Italian specialty made by braising veal shanks with vegetables and white wine. Depending on the region of Italy, it is most often served with a risotto or polenta and will be sure to leave the whole family wanting more."];
             var indexValue = Math.floor(Math.random() * (array.length));
-            console.log(indexValue); 
             var recipeChoice = array[indexValue];
             var description = menuDescription[indexValue];
+            $("body").attr("id","twentytofourty");
         }
 
         else if (tempF >= 40 && tempF < 60) {
@@ -72,9 +74,9 @@ $(document).ready(function () {
                 "Classic and easy to make, this chicken Alfredo dish is perfect comfort food. The fettuccine noodles and a generous helping of Parmesan will leave everyone asking for the recipe.",
                 "Hailing from the Punjab region of India, Baingan bharta is a vegetarian dish prepared by mincing eggplant that is grilled over charcoal or directly over a flame. The smoked eggplant is then mixed with tomato, onion, ginger, garlic and cilantro."];
             var indexValue = Math.floor(Math.random() * (array.length));
-            console.log(indexValue); 
             var recipeChoice = array[indexValue];
             var description = menuDescription[indexValue];
+            $("body").attr("id","fourtytosixty");
         }
 
         else if (tempF >= 60 && tempF < 80) {
@@ -85,9 +87,9 @@ $(document).ready(function () {
                 "Coq a Vin is a French dish prepared by braising chicken with red wine, mushrooms and garlic that is perfect for any occasion. Although this dish requires some skill and patience in the kitchen, the rewards are sure to pay off.",
                 "This dish is perfect as the weather starts to warm up and flowers begin to bloom as spring turns into summer. Fresh and bright, the roasted eggplant with some seasoned lentils and pine nuts will be sure to impress your guests."];
             var indexValue = Math.floor(Math.random() * (array.length));
-            console.log(indexValue); 
             var recipeChoice = array[indexValue];
             var description = menuDescription[indexValue];
+            $("body").attr("id","sixtytoeighty");
         }
 
         else if (tempF >= 80) {
@@ -98,9 +100,9 @@ $(document).ready(function () {
                 "Coming from the island of Jamaica, jerk chicken with rice is loved all around the world. The marinade, featuring red chilis, brown sugar and other spices is the key to elevating this dish to the next level for everyone to enjoy.",
                 "A tuna Nicoise salad is a quintessential summer dish. Incorporating hard-boiled eggs, spinach, onion and potatoes, it is the perfect blend of light and filling for a lunch on the go or a family dinner."];
             var indexValue = Math.floor(Math.random() * (array.length));
-            console.log(indexValue); 
             var recipeChoice = array[indexValue];
             var description = menuDescription[indexValue];
+            $("body").attr("id","aboveeighty");
         }
         recipeapifunction(recipeChoice);
         foodescription(description);    
