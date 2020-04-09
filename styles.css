@@ -70,7 +70,7 @@ p {
 }
 
 a {
-    color: rgb(130,216,202);
+    color:white;
 }
 
 button {
@@ -90,6 +90,10 @@ button {
     background: linear-gradient(180deg, rgba(130,216,202,1) 45%, rgba(72,188,196,1) 100%);
     color: white;
     padding: 5px;
+}
+
+#recipelink, #youtubelink {
+    color:white;
 }
 
 footer {

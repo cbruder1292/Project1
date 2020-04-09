@@ -1,9 +1,19 @@
 $(document).ready(function () {
 
+    function showRow2 () {
+        $("#row2").show();
+        $("#row2").show();
+    }
+    
+    function hideRow2 () {
+        $("#row2").hide();
+    }
+    hideRow2();
+
     $("#button-addon2").on("click", function () {
         var cityName = $("#cityInput").val();
         apicallFunction(cityName);
-
+        showRow2();
     })
 
     function apicallFunction(cityName) {
